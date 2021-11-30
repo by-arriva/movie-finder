@@ -30,7 +30,7 @@ export function sendRequest(key, value, page, season) {
             }
             dispatch({type: "SEARCH", payload: value})
         }
-        return fetch(`http://www.omdbapi.com/?${key}=${value}&apikey=ce762116${page ? "&page="+page : ""}${season ? "&season="+season : ""}${key==="i" ? "&plot=full" : ""}`)
+        return fetch(`https://www.omdbapi.com/?${key}=${value}&apikey=ce762116${page ? "&page="+page : ""}${season ? "&season="+season : ""}${key==="i" ? "&plot=full" : ""}`)
         .then(resp => resp.json())
         .then(res => {
             if(res.Response === "False") {

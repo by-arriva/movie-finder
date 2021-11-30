@@ -4,7 +4,7 @@ import Film from "./pages/Film"
 
 export default function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <div className="App">
             <Routes>
                 <Route path={"/"} exact element={<Search/>}/>
